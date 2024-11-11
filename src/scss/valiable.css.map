@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,iBAAiB,CAAA,QAAC;EAClB,mBAAmB,CAAA,qBAAC;EACpB,mBAAmB,CAAA,QAAC;EACpB,cAAc,CAAA,QAAC;CAClB;;CAED,AAAA,AAAA,UAAC,CAAW,OAAO,AAAlB,EAAoB;EACjB,iBAAiB,CAAA,QAAC;EAClB,mBAAmB,CAAA,QAAC;EACpB,mBAAmB,CAAA,QAAC;EACpB,cAAc,CAAA,QAAC;CAClB",
+    "sources": [
+        "valiable.scss"
+    ],
+    "names": [],
+    "file": "valiable.css"
+}

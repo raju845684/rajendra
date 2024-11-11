@@ -1,0 +1,119 @@
+@media (max-width: 1220px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .rm-header .rm-header-col .rm-toggle {
+    display: block;
+  }
+  .rm-header .rm-header-col .rm-menulist {
+    position: absolute;
+    display: block;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    padding: 0px 15px;
+    background-color: rgba(9, 10, 26, 0.9);
+    padding-bottom: 15px;
+  }
+  .rm-header .rm-header-col .rm-menulist .rm-lets-talk {
+    margin-left: 0px;
+  }
+  .rm-header .rm-header-col .rm-menulist ul li {
+    display: block;
+  }
+  .rm-header .rm-header-col .rm-logo a img {
+    width: 120px;
+  }
+  .rm-header {
+    padding: 12px 0px;
+  }
+  .rm-header .rm-header-col .rm-menulist ul li a {
+    padding: 10px 0px;
+  }
+  .rm-header .rm-header-col .rm-menulist .rm-lets-talk a {
+    text-align: center;
+  }
+  .rm-header .rm-header-col .rm-menulist {
+    display: none;
+  }
+  .rm-header .rm-header-col .rm-menulist.open {
+    display: block;
+  }
+  body {
+    padding-top: 58px;
+  }
+  .rm-main-slider .rm-content {
+    order: 2;
+  }
+  .rm-main-slider .rm-icon {
+    order: 1;
+  }
+  .rm-main-slider .rm-content::before {
+    right: 0px;
+  }
+}
+@media (max-width: 639px) {
+  .rm-main-slider::before {
+    height: 60px;
+    width: 60px;
+    border: 3px solid #1e4748;
+    top: 20px;
+    left: -30px;
+  }
+  .rm-main-slider .rm-icon svg {
+    max-height: 520px;
+  }
+  .rm-main-slider .rm-icon .rm-doots svg {
+    width: 100%;
+    opacity: 0.2;
+  }
+  .rm-main-slider .rm-content .rm-info h1 {
+    font-size: 25px;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+  .rm-main-slider .rm-content .rm-info p {
+    font-size: 12px;
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+  .rm-main-slider .rm-content .rm-box svg {
+    display: none;
+  }
+  .rm-main-slider .rm-content::before {
+    display: none;
+  }
+  .rm-footer .rm-left ul {
+    text-align: center;
+  }
+  .rm-footer .rm-right {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .rm-footer {
+    border-top: 1px solid #6d6d6d;
+    padding: 15px 0px;
+    margin-top: 10px;
+  }
+  .rm-footer .rm-left ul li a {
+    height: 30px;
+    width: 30px;
+  }
+  .rm-footer .rm-left ul li a svg {
+    font-size: 13px;
+  }
+  .rm-footer .rm-right h6 {
+    font-size: 12px;
+  }
+  .rm-main-slider .rm-content .rm-info h5 {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+  .rm-main-slider .rm-content .rm-info ul li a {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+}

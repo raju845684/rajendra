@@ -1,0 +1,14 @@
+:root {
+  --body_background: #090a1a;
+  --header_background: rgba(9, 10, 26, 0.9);
+  --header_menu_color: #ffffff;
+  --logo_bracket: #ffffff;
+}
+
+[dark-theme="light"] {
+  --body_background: #ffffff;
+  --header_background: #ffffff;
+  --header_menu_color: #090a1a;
+  --logo_bracket: #090a1a;
+}
+/*# sourceMappingURL=valiable.css.map */

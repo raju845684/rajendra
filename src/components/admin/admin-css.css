@@ -1,0 +1,36 @@
+body {
+  padding: 0px;
+}
+
+.admin-sidebar {
+  width: 20%;
+  border-right: 1px solid #5c5d5d;
+  height: 100vh;
+}
+
+.admin-sidebar .ad-logo {
+  text-align: center;
+  padding: 11px 30px;
+  border-bottom: 1px solid #5c5d5d;
+}
+
+.admin-sidebar .ad-logo img {
+  width: 120px;
+}
+
+.admin-header {
+  border-bottom: 1px solid #5c5d5d;
+}
+
+.admin-header .navbar-light .navbar-text {
+  color: #ffffff;
+}
+
+.admin-header a {
+  color: #ffffff !important;
+}
+
+.admin-main {
+  width: 80%;
+}
+/*# sourceMappingURL=admin-css.css.map */
