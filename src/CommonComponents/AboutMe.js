@@ -3,12 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Progress } from "react-sweet-progress";
 import { TypeAnimation } from "react-type-animation";
+import Tild from "../components/CommonVector/Tild";
 
 const AboutMe = () => {
   return (
     <div className="rm-aboutme">
       <Container>
         <Row>
+          {/* <Tild className="left-tild" /> */}
           <Col lg={12} md={12} sm={12} className="rm-global-heading">
             <div className="rm-text-right">
               <h3>

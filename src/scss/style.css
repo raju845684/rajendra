@@ -284,7 +284,11 @@ a {
 }
 
 .rm-main-slider {
-  padding: 175px 0px 25px 0px;
+  padding: 215px 0px 25px 0px;
+  position: relative;
+}
+
+.rm-main-slider .container {
   position: relative;
 }
 
@@ -367,9 +371,10 @@ a {
 
 .rm-main-slider .rm-content .rm-box svg {
   position: absolute;
-  bottom: 40px;
+  bottom: -60px;
   left: -50px;
   z-index: 1;
+  opacity: 0.3;
 }
 
 .rm-main-slider .rm-content::before {
@@ -385,6 +390,14 @@ a {
   z-index: -1;
 }
 
+.rm-main-slider .rajendra-photo {
+  position: absolute;
+  max-width: 690px;
+  right: -30px;
+  z-index: 9;
+  top: -75px;
+}
+
 .rm-main-slider .rm-icon {
   position: relative;
 }
@@ -396,12 +409,19 @@ a {
   z-index: 2;
 }
 
+.rm-main-slider .rm-icon img {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
 .rm-main-slider .rm-icon .rm-doots svg {
   position: absolute;
   z-index: 1;
   bottom: 0;
   width: auto;
   right: 0;
+  opacity: 0.3;
 }
 
 .rm-main-slider::before {
@@ -561,17 +581,35 @@ a {
   top: 7px;
 }
 
+.tild {
+  position: absolute;
+  position: absolute;
+  left: 0;
+  max-width: 270px;
+  opacity: 0.1;
+}
+
 .rm-aboutme {
-  padding: 95px 0px;
+  padding: 45px 0px;
+  padding-top: 120px;
+}
+
+.rm-aboutme .container {
+  position: relative;
+}
+
+.rm-aboutme .container .tild {
+  top: -50px;
 }
 
 .rm-aboutme .rm-progressbar .rm-progressbar-single {
   margin-bottom: 28px;
   position: relative;
+  font-size: 12px;
 }
 
 .rm-aboutme .rm-progressbar .rm-progressbar-single .react-sweet-progress-line-inner {
-  background-color: #34f5c6 !important;
+  background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%);
 }
 
 .rm-aboutme .rm-progressbar .rm-progressbar-single .react-sweet-progress-symbol {
@@ -678,10 +716,11 @@ a {
 .rm-services .rm-services-box h3 {
   color: #090a1a;
   font-size: 26px;
+  font-weight: 600;
 }
 
 .rm-services .rm-services-box p {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 28px;
   color: #2f455c;
@@ -743,7 +782,6 @@ a {
 }
 
 .rm-work .card {
-  border: 1px solid #34f5c6;
   background-color: transparent !important;
 }
 
@@ -751,5 +789,34 @@ a {
   height: 240px;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 1px solid #34f5c6;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.rm-work .card .card-body {
+  padding: 20px 0px;
+}
+
+.rm-work .card .card-body .card-title {
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+.rm-work .card .card-body .card-text {
+  font-size: 15px;
+  padding-left: 50px;
+  position: relative;
+}
+
+.rm-work .card .card-body .card-text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  background-color: #b0b0b2;
+  left: 0;
+  top: 10px;
 }
 /*# sourceMappingURL=style.css.map */
