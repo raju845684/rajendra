@@ -1,6 +1,7 @@
 @media (max-width: 1220px) {
   .container {
     max-width: 100%;
+    padding: 0px 25px;
   }
 }
 
@@ -67,8 +68,11 @@
     max-height: 520px;
   }
   .rm-main-slider .rm-icon .rm-doots svg {
+    margin-top: 0px;
     width: 100%;
     opacity: 0.2;
+    right: 0px;
+    top: -350px;
   }
   .rm-main-slider .rm-content .rm-info h1 {
     font-size: 25px;
@@ -115,5 +119,118 @@
   .rm-main-slider .rm-content .rm-info ul li a {
     font-size: 12px;
     padding: 8px 20px;
+  }
+  .rm-aboutme .rm-progressbar {
+    padding-left: 15px;
+    padding-top: 20px;
+  }
+  .rm-client-logo ul {
+    flex-wrap: wrap;
+  }
+  .rm-client-logo ul li a img {
+    width: 100%;
+  }
+
+  .rm-services .rm-services-box:first-child,
+  .rm-services .rm-services-box:last-child {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .rm-services .rm-services-box {
+    padding: 20px;
+  }
+  .rm-services .rm-services-box svg {
+    max-height: 52px;
+    min-height: 52px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .rm-services .rm-services-box p {
+    font-size: 13px;
+    line-height: 23px;
+  }
+  .rm-work .container .tild {
+    top: -30px;
+    left: 20px;
+  }
+  .tild {
+    max-width: 160px;
+  }
+  .rm-global-heading .rm-text-left h3,
+  .rm-global-heading .rm-text-right h3 {
+    font-size: 26px;
+  }
+  .rm-global-heading .rm-text-left h3 span,
+  .rm-global-heading .rm-text-right h3 span {
+    bottom: -27px;
+  }
+  .rm-testimonial .circle-layout {
+    display: none;
+  }
+  .rm-main-slider .rajendra-photo {
+    position: relative;
+    right: auto;
+    top: -45px;
+    opacity: 0.6;
+  }
+  .rm-main-slider {
+    padding: 155px 0px 25px 0px;
+  }
+  .rm-aboutme {
+    padding: 15px 0px;
+    padding-top: 30px;
+  }
+  .rm-global-heading {
+    margin-bottom: 55px;
+  }
+  .rm-services {
+    padding: 55px 0px;
+  }
+  .rm-global-view_all h6 {
+    padding-bottom: 17px;
+  }
+  .rm-work .grid-item {
+    width: calc(100% - 30px);
+    margin-bottom: 0px;
+  }
+  .rm-work .card .card-body .card-title {
+    font-size: 19px;
+  }
+  .rm-work .card .card-body .card-text {
+    font-size: 14px;
+  }
+  .rm-testimonial .testimonial-content {
+    margin-right: 0;
+    padding: 40px;
+    width: 100%;
+    margin-left: 0px;
+    border-radius: 8px;
+  }
+  .rm-testimonial .testimonial-content .play,
+  .rm-testimonial .testimonial-content .rectangle {
+    display: none;
+  }
+  .rm-contactus form {
+    margin-top: 30px;
+    padding-left: 0;
+  }
+  .rm-testimonial {
+    padding: 45px 0px;
+  }
+  .rm-contactus {
+    padding: 35px 0px;
+  }
+  .rm-contactus form .rm-bg {
+    margin-top: 30px;
+  }
+  .rm-main-slider .rm-content .rm-info {
+    margin-top: -320px;
+  }
+  .rm-client-logo ul li {
+    width: 50%;
+    padding: 8px 6px;
+  }
+  .rm-client-logo ul li a img {
+    width: 80%;
   }
 }
