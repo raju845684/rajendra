@@ -1,10 +1,5 @@
 import React, { useRef, useState } from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { Progress } from "react-sweet-progress";
-import { TypeAnimation } from "react-type-animation";
-import Isotope from "isotope-layout";
-import { useEffect } from "react";
 import {
   PROJECT1,
   PROJECT2,
@@ -17,31 +12,8 @@ import {
 
 const MyWork = () => {
   const gridRef = useRef(null);
-  const [isotope, setIsotope] = useState(null);
   const [activeFilter, setActiveFilter] = useState("*");
 
-  useEffect(() => {
-    setIsotope(
-      new Isotope(gridRef.current, {
-        itemSelector: ".grid-item",
-        layoutMode: "fitRows",
-      })
-    );
-  }, []);
-
-  useEffect(() => {
-    if (isotope) {
-      isotope.arrange({ filter: activeFilter });
-    }
-  }, [isotope, activeFilter]);
-
-  const filters = [
-    { label: "Show All", filter: "*" },
-    { label: "Mobile App", filter: ".category-a" },
-    { label: "React App", filter: ".category-b" },
-    { label: "Web Design", filter: ".category-c" },
-    { label: "Adobe XD", filter: ".category-d" },
-  ];
 
   return (
     <div className="rm-work">
@@ -85,19 +57,7 @@ const MyWork = () => {
           </Col>
           <Col lg={12} md={12} sm={12} className="rm-content">
             <div>
-              <div className="all_btn">
-                {filters.map(({ label, filter }) => (
-                  <Button
-                    key={filter}
-                    className={activeFilter === filter ? "active" : ""}
-                    onClick={() => setActiveFilter(filter)}
-                  >
-                    {label}
-                  </Button>
-                ))}
-              </div>
-
-              <div className="grid" ref={gridRef}>
+              <div className="grid">
                 <div className="grid-item category-a">
                   <Card>
                     <a href={"https://robnhood.nl/"} target="_blank">
