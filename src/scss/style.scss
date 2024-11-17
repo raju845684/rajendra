@@ -410,7 +410,7 @@ a {
                 content: "";
                 display: block;
                 position: absolute;
-                background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%);
+                // background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%);
                 width: 110px;
                 height: 60px;
                 right: -10px;
@@ -423,7 +423,7 @@ a {
                 display: block;
                 left: 0;
                 right: 0;
-                bottom: -50px;
+                bottom: -40px;
                 // svg {
                 //     width: 100%;
                 // }
@@ -445,7 +445,7 @@ a {
                 content: "";
                 display: block;
                 position: absolute;
-                background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%);
+                // background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%);
                 width: 110px;
                 height: 60px;
                 left: -10px;
@@ -458,7 +458,7 @@ a {
                 display: block;
                 left: 0;
                 right: 0;
-                bottom: -50px;
+                bottom: -40px;
                 // svg {
                 //     width: 100%;
                 // }
@@ -489,6 +489,17 @@ a {
         }
     }
 }
+.rm-global-view_all.center {
+    .rm-services-box {
+        background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%) !important;
+        h3 {
+            color: #090a1a !important;
+        }
+        p {
+            color: #2f455c !important;
+        }
+    }
+}
 // TILD
 .tild {
     position: absolute;
@@ -508,20 +519,31 @@ a {
         }
     }
     .rm-progressbar {
+        padding-left: 80px;
         .rm-progressbar-single {
             margin-bottom: 28px;
             position: relative;
             font-size: 12px;
+            span {
+                margin-bottom: 12px;
+                display: block;
+                font-size: 14px;
+            }
             .react-sweet-progress-line-inner {
                 background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%);
+                min-height: 8px;
+            }
+            .react-sweet-progress-line {
+                background-color: #3e3e3e !important;
             }
             .react-sweet-progress-symbol {
                 color: #ffffff !important;
                 font-family: "Open Sans", sans-serif;
                 font-weight: 500;
                 position: absolute;
-                top: -24px;
+                top: -34px;
                 right: 8px;
+                font-size: 14px;
             }
             .bar {
                 position: relative;
@@ -590,10 +612,15 @@ a {
     .rm-services-box:first-child,
     .rm-services-box:last-child {
         margin-top: 40px;
+        border: 1px solid #646464;
+        // background: linear-gradient(183deg, #1dcefc 5.15%, #2fe9c0 99.88%);
+        h3 {
+            color: #ffffff;
+        }
     }
     .rm-services-box {
         text-align: center;
-        background: linear-gradient(183deg, #1dcefc 5.15%, #2fe9c0 99.88%);
+        // background: linear-gradient(183deg, #1dcefc 5.15%, #2fe9c0 99.88%);
         padding: 40px;
         border-radius: 10px;
         margin: 0px;
@@ -613,7 +640,7 @@ a {
             font-size: 15px;
             font-weight: 500;
             line-height: 28px;
-            color: #2f455c;
+            color: #939393;
         }
     }
     .rm-services-box.m0 {
@@ -631,7 +658,7 @@ a {
     }
 
     .grid-item {
-        width: calc(33.333% - 30px); /* Subtracting margin */
+        width: calc(33.33% - 30px); /* Subtracting margin */
         margin: 15px;
         display: flex;
         justify-content: center;
@@ -641,13 +668,13 @@ a {
         box-sizing: border-box;
     }
     .all_btn {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         button {
             font-size: 14px;
             font-weight: 500;
             color: #ffffff;
             padding: 10px 25px;
-            border: 1px solid #34f5c6;
+            border: 1px solid #3c3c3c;
             border-radius: 4px;
             outline: none;
             margin-right: 15px;
@@ -661,18 +688,22 @@ a {
     .card {
         // border: 1px solid #34f5c6;
         background-color: transparent !important;
+        transition: all 0.4s linear .4s;
         img {
-            height: 240px;
+            // height: 180px;
             object-fit: cover;
-            border: 1px solid #34f5c6;
+            border: 1px solid #535454;
             border-radius: 8px;
             width: 100%;
+            opacity: 0.7;
         }
         .card-body {
             padding: 20px 0px;
             .card-title {
                 font-size: 22px;
                 margin-bottom: 3px;
+                color: #ffffff;
+                transition: all 0.4s linear .4s;
             }
             .card-text {
                 font-size: 15px;
@@ -688,6 +719,18 @@ a {
                     left: 0;
                     top: 10px;
                 }
+            }
+        }
+        &:hover {
+            img {
+                opacity: 1;
+            }
+            .card-title {
+                background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                transition: all 0.4s linear .4s;
             }
         }
     }

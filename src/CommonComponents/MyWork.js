@@ -5,6 +5,15 @@ import { Progress } from "react-sweet-progress";
 import { TypeAnimation } from "react-type-animation";
 import Isotope from "isotope-layout";
 import { useEffect } from "react";
+import {
+  PROJECT1,
+  PROJECT2,
+  PROJECT3,
+  PROJECT4,
+  PROJECT5,
+  PROJECT6,
+  PROJECT7,
+} from "../assets/images";
 
 const MyWork = () => {
   const gridRef = useRef(null);
@@ -91,98 +100,117 @@ const MyWork = () => {
               <div className="grid" ref={gridRef}>
                 <div className="grid-item category-a">
                   <Card>
-                    <Card.Img
-                      variant="top"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQm_C9onpbbzSaz-LptOxBLdA_aN0GYFJF1w&s"
-                    />
+                    <a href={"https://robnhood.nl/"} target="_blank">
+                      <Card.Img variant="top" src={PROJECT1} alt="" />
+                    </a>
                     <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
+                      <a href={"https://robnhood.nl/"} target="_blank">
+                        <Card.Title>Robnhood nl</Card.Title>
+                      </a>
                       <Card.Text>
-                        <span>Web Design</span>, <span>UI</span>
+                        <span>Robnhood nl</span>, <span>UI</span>
                       </Card.Text>
                     </Card.Body>
                   </Card>
                 </div>
                 <div className="grid-item category-b">
                   <Card>
-                    <Card.Img
-                      variant="top"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPB49M0pdVDAZhbn1B7rSH7QRCBrsPtJNDAA&s"
-                    />
+                    <a href={"https://pathlock.com/"} target="_blank">
+                      <Card.Img variant="top" src={PROJECT2} alt="" />
+                    </a>
                     <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
+                      <a href={"https://pathlock.com/"} target="_blank">
+                        <Card.Title>Pathlock</Card.Title>
+                      </a>
                       <Card.Text>
-                        <span>Web Design</span>, <span>UI</span>
+                        <span>Robnhood nl</span>, <span>UI</span>
                       </Card.Text>
                     </Card.Body>
                   </Card>
                 </div>
                 <div className="grid-item category-a">
                   <Card>
-                    <Card.Img
-                      variant="top"
-                      src="https://www.crio.do/blog/content/images/2021/03/Javascript-projects--React.png"
-                    />
+                    <a
+                      href={"https://www.qfixinfo.com/index.php"}
+                      target="_blank"
+                    >
+                      <Card.Img variant="top" src={PROJECT3} alt="" />
+                    </a>
                     <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
+                      <a
+                        href={"https://www.qfixinfo.com/index.php"}
+                        target="_blank"
+                      >
+                        <Card.Title>Q fix </Card.Title>
+                      </a>
                       <Card.Text>
-                        <span>Web Design</span>, <span>UI</span>
+                        <span>Web</span>, <span>UI</span>
                       </Card.Text>
                     </Card.Body>
                   </Card>
                 </div>
                 <div className="grid-item category-b">
                   <Card>
-                    <Card.Img
-                      variant="top"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLpuy336hDvu-QK8oCOodA9wl8kc4a9-uIQ&s"
-                    />
+                    <a
+                      href={"https://www.fissara.com/homepage/"}
+                      target="_blank"
+                    >
+                      <Card.Img variant="top" src={PROJECT4} alt="" />
+                    </a>
                     <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
+                      <a
+                        href={"https://www.fissara.com/homepage/"}
+                        target="_blank"
+                      >
+                        <Card.Title>fissara</Card.Title>
+                      </a>
                       <Card.Text>
-                        <span>Web Design</span>, <span>UI</span>
+                        <span>Web</span>, <span>UI</span>
                       </Card.Text>
                     </Card.Body>
                   </Card>
                 </div>
                 <div className="grid-item category-a">
                   <Card>
-                    <Card.Img
-                      variant="top"
-                      src="https://cdn.wedevs.com/uploads/2021/04/Best-project-management-software-for-web-designers.png"
-                    />
+                    <a href={"https://truefarmfoods.com/"} target="_blank">
+                      <Card.Img variant="top" src={PROJECT5} alt="" />
+                    </a>
                     <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
+                      <a href={"https://truefarmfoods.com/"} target="_blank">
+                        <Card.Title>True Farm Foods</Card.Title>
+                      </a>
                       <Card.Text>
-                        <span>Web Design</span>, <span>UI</span>
+                        <span>Web</span>, <span>UI</span>
                       </Card.Text>
                     </Card.Body>
                   </Card>
                 </div>
                 <div className="grid-item category-b">
                   <Card>
-                    <Card.Img
-                      variant="top"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1-jXtv_I05r-Dch2eZOevIzOUzu6osLftQ&s"
-                    />
+                    <a href={"https://meganrachel.com/"} target="_blank">
+                      <Card.Img variant="top" src={PROJECT6} alt="" />
+                    </a>
                     <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
+                      <a href={"https://meganrachel.com/"} target="_blank">
+                        <Card.Title>Meganrachel</Card.Title>
+                      </a>
                       <Card.Text>
-                        <span>Web Design</span>, <span>UI</span>
+                        <span>Web</span>, <span>UI</span>
                       </Card.Text>
                     </Card.Body>
                   </Card>
                 </div>
                 <div className="grid-item category-c">
                   <Card>
-                    <Card.Img
-                      variant="top"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRanLrxpNO1zUdLvrSdL7cIOVof19tT8JDqA&s"
-                    />
+                    <a href={"https://www.injuredcare.com/"} target="_blank">
+                      <Card.Img variant="top" src={PROJECT7} alt="" />
+                    </a>
                     <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
+                      <a href={"https://www.injuredcare.com/"} target="_blank">
+                        <Card.Title>Injured Care</Card.Title>
+                      </a>
                       <Card.Text>
-                        <span>Web Design</span>, <span>UI</span>
+                        <span>Web</span>, <span>UI</span>
                       </Card.Text>
                     </Card.Body>
                   </Card>

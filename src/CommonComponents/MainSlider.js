@@ -50,7 +50,7 @@ const MainSlider = () => {
                   <Link to="">Hire Me</Link>{" "}
                 </li>
                 <li>
-                  <Link to="">Portfolio</Link>{" "}
+                  <Link to="">Download CV</Link>{" "}
                 </li>
               </ul>
             </div>

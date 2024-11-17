@@ -77,14 +77,14 @@ const AboutMe = () => {
               allowing me to build comprehensive and high-performing web
               applications.
             </p>
-            <ul>
+            {/* <ul>
               <li className="rm-bg">
                 <Link to="/">Download CV</Link>
               </li>
               <li>
                 <Link to="/">Send Message</Link>{" "}
               </li>
-            </ul>
+            </ul> */}
           </Col>
           {/* <Col lg={} md={12} sm={12}></Col> */}
           <Col
@@ -93,12 +93,12 @@ const AboutMe = () => {
             sm={12}
             className="rm-progressbar align-self-center"
           >
-            <div className="rm-progressbar-single">
+            {/* <div className="rm-progressbar-single">
               <span>HTML 5 / SCSS</span>
               <div className="bar">
                 <Progress percent={95} />
               </div>
-            </div>
+            </div> */}
             <div className="rm-progressbar-single">
               <span>MUI / TailWind / BootStrap / CSS3</span>
               <div className="bar">
@@ -123,12 +123,12 @@ const AboutMe = () => {
                 <Progress percent={95} />
               </div>
             </div>
-            <div className="rm-progressbar-single">
+            {/* <div className="rm-progressbar-single">
               <span>Adobe XD - PhotoShop - Illustrator / Figma </span>
               <div className="bar">
                 <Progress percent={80} />
               </div>
-            </div>
+            </div> */}
           </Col>
         </Row>
       </Container>

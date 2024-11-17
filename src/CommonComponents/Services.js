@@ -114,7 +114,7 @@ const Services = () => {
               </p>
             </div>
           </Col>
-          <Col lg={4} md={4} sm={12} className="rm-global-view_all">
+          <Col lg={4} md={4} sm={12} className="rm-global-view_all center">
             <div className="rm-services-box m0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
