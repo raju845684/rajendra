@@ -3,6 +3,8 @@ import AboutMe from '../../../CommonComponents/AboutMe'
 import MainSlider from '../../../CommonComponents/MainSlider'
 import Services from '../../../CommonComponents/Services'
 import MyWork from '../../../CommonComponents/MyWork'
+import Testimonial from '../../../CommonComponents/Testimonial'
+import ContactUs from '../../../CommonComponents/ContactUs'
 
 const Home = () => {
     return (
@@ -11,6 +13,8 @@ const Home = () => {
             <AboutMe />
             <Services />
             <MyWork />
+            <Testimonial />
+            <ContactUs />
         </>
     )
 }

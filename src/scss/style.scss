@@ -650,6 +650,12 @@ a {
 }
 // MY WORK
 .rm-work {
+    .container {
+        position: relative;
+        .tild {
+            top: -50px;
+        }
+    }
     .grid {
         display: flex;
         flex-wrap: wrap;
@@ -688,7 +694,7 @@ a {
     .card {
         // border: 1px solid #34f5c6;
         background-color: transparent !important;
-        transition: all 0.4s linear .4s;
+        transition: all 0.4s linear 0.4s;
         img {
             // height: 180px;
             object-fit: cover;
@@ -699,11 +705,12 @@ a {
         }
         .card-body {
             padding: 20px 0px;
+            padding-bottom: 8px;
             .card-title {
                 font-size: 22px;
                 margin-bottom: 3px;
-                color: #ffffff;
-                transition: all 0.4s linear .4s;
+                color: #d1d1d1;
+                transition: all 0.4s linear 0.4s;
             }
             .card-text {
                 font-size: 15px;
@@ -730,8 +737,44 @@ a {
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
-                transition: all 0.4s linear .4s;
+                transition: all 0.4s linear 0.4s;
             }
         }
+    }
+}
+
+// TESTIMONIAL
+.rm-testimonial {
+    padding: 95px 0px;
+}
+
+// Contact US
+.rm-contactus {
+    padding: 95px 0px;
+    form {
+        margin-top: 50px;
+        padding-right: 50px;
+        .form-control {
+            background-color: transparent;
+            border: 0px;
+            outline: none;
+            padding: 10px 0px;
+            border-bottom: 2px solid #a9a9a9;
+            border-radius: 0;
+            margin-bottom: 20px;
+        }
+        .rm-bg {
+            margin-top: 50px;
+            background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%);
+            color: #090a1a;
+            display: block;
+            font-weight: 500;
+            padding: 10px 25px;
+            border: 1px solid #34f5c6;
+            border-radius: 4px;
+        }
+    }
+    .rm-contact-vater {
+        width: 100%;
     }
 }

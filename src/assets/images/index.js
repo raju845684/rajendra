@@ -11,3 +11,4 @@ exports.PROJECT4 = require('./project/p-4.png');
 exports.PROJECT5 = require('./project/p-5.png');
 exports.PROJECT6 = require('./project/p-6.png');
 exports.PROJECT7 = require('./project/p-7.png');
+exports.PROJECT8 = require('./project/p-8.png');

@@ -412,7 +412,7 @@ const Header = () => {
                   <li><Link to={""}>About</Link></li>
                   <li><Link to={""}>Portfolio</Link> </li>
                   <li><Link to={""}>Services</Link></li>
-                  <li><Link to={""}>Blog</Link> </li>
+                  {/* <li><Link to={""}>Blog</Link> </li> */}
                   <li><Link to={""}>Contact</Link></li>
               </ul>
               <div className="rm-lets-talk">
@@ -422,7 +422,7 @@ const Header = () => {
                   onChange={toggleDarkMode}
                   size={24}
                 />
-                <Link to="">Let's Talk</Link>
+                <a href="tel:+918114714428">Let's Talk</a>
               </div>
             </div>
             <div

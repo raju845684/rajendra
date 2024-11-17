@@ -8,17 +8,19 @@ import {
   PROJECT5,
   PROJECT6,
   PROJECT7,
+  PROJECT8,
 } from "../assets/images";
+import Tild from "../components/CommonVector/Tild";
 
 const MyWork = () => {
   const gridRef = useRef(null);
   const [activeFilter, setActiveFilter] = useState("*");
 
-
   return (
     <div className="rm-work">
       <Container>
         <Row>
+          <Tild className="left-tild" />
           <Col lg={12} md={12} sm={12} className="rm-global-heading">
             <div className="rm-text-right">
               <h3>
@@ -168,6 +170,21 @@ const MyWork = () => {
                     <Card.Body>
                       <a href={"https://www.injuredcare.com/"} target="_blank">
                         <Card.Title>Injured Care</Card.Title>
+                      </a>
+                      <Card.Text>
+                        <span>Web</span>, <span>UI</span>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </div>
+                <div className="grid-item category-c">
+                  <Card>
+                    <a href={"https://www.cantabnyc.org/"} target="_blank">
+                      <Card.Img variant="top" src={PROJECT8} alt="" />
+                    </a>
+                    <Card.Body>
+                      <a href={"https://www.cantabnyc.org/"} target="_blank">
+                        <Card.Title>Cantabnyc</Card.Title>
                       </a>
                       <Card.Text>
                         <span>Web</span>, <span>UI</span>
