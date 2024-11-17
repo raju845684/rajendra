@@ -31,7 +31,7 @@ const Tild = () => {
           transform="translate(499 2719.533)"
           fill="none"
           stroke="#34f5c6"
-          stroke-width="4"
+          strokeWidth="4"
         >
           <circle cx="19" cy="19" r="19" stroke="none" />
           <circle cx="19" cy="19" r="17" fill="none" />
@@ -42,7 +42,7 @@ const Tild = () => {
           transform="translate(700 2529.533)"
           fill="none"
           stroke="#1dcdfe"
-          stroke-width="4"
+          strokeWidth="4"
         >
           <circle cx="19" cy="19" r="19" stroke="none" />
           <circle cx="19" cy="19" r="17" fill="none" />
@@ -54,8 +54,8 @@ const Tild = () => {
           transform="translate(2512.701 -554.801) rotate(-11)"
           fill="none"
           stroke="#34f5c6"
-          stroke-linecap="round"
-          stroke-width="4"
+          strokeLinecap="round"
+          strokeWidth="4"
         />
       </g>
     </svg>

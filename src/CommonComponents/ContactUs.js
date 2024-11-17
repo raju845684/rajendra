@@ -7,7 +7,7 @@ const ContactUs = () => {
       <Container>
         <Row>
           <Col lg={12} md={12} sm={12} className="rm-global-heading">
-            <div className="rm-text-left">
+            <div className="rm-text-right">
               <h3>
                 Contact with me
                 <span className="">
@@ -42,29 +42,6 @@ const ContactUs = () => {
               </h3>
             </div>
           </Col>
-          <Col lg={6} md={12} sm={12}>
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="text" placeholder="Your Name" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="email" placeholder="Your Email Address " />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="text" placeholder="Subject" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Control
-                  as="textarea"
-                  placeholder="Leave a comment here"
-                  style={{ height: "157px" }}
-                />
-              </Form.Group>
-              <Button className="rm-bg" variant="primary" type="submit">
-                Send Message
-              </Button>
-            </Form>
-          </Col>
           <Col lg={6} md={6} sm={12}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,8 +56,8 @@ const ContactUs = () => {
                   y2="1"
                   gradientUnits="objectBoundingBox"
                 >
-                  <stop offset="0" stop-color="#efefef" />
-                  <stop offset="1" stop-color="#2fe9c0" />
+                  <stop offset="0" stopColor="#efefef" />
+                  <stop offset="1" stopColor="#2fe9c0" />
                 </linearGradient>
                 <linearGradient
                   id="linear-gradient-7"
@@ -89,8 +66,8 @@ const ContactUs = () => {
                   y2="0.138"
                   gradientUnits="objectBoundingBox"
                 >
-                  <stop offset="0" stop-color="#1dcefc" />
-                  <stop offset="1" stop-color="#2fe9c0" />
+                  <stop offset="0" stopColor="#1dcefc" />
+                  <stop offset="1" stopColor="#2fe9c0" />
                 </linearGradient>
                 <linearGradient
                   id="linear-gradient-8"
@@ -434,6 +411,29 @@ const ContactUs = () => {
                 />
               </g>
             </svg>
+          </Col>
+          <Col lg={6} md={12} sm={12}>
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control type="text" placeholder="Your Name" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control type="email" placeholder="Your Email Address " />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control type="text" placeholder="Subject" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Control
+                  as="textarea"
+                  placeholder="Leave a comment here"
+                  style={{ height: "157px" }}
+                />
+              </Form.Group>
+              <Button className="rm-bg" variant="primary" type="submit">
+                Send Message
+              </Button>
+            </Form>
           </Col>
         </Row>
       </Container>
