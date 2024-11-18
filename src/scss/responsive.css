@@ -237,7 +237,10 @@
     padding: 8px 6px;
   }
   .rm-client-logo ul li a img {
-    width: 80%;
+    width: 72%;
+  }
+  .rm-client-logo ul li a {
+    min-height: 66px;
   }
   .rm-main-slider .rm-content .rm-info p {
     color: #e7e7e7;
