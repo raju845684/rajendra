@@ -18,6 +18,10 @@
   padding: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .btn-check:active + .btn-primary:focus,
 .btn-check:checked + .btn-primary:focus,
 .btn-primary.active:focus,
@@ -1154,6 +1158,21 @@ input::placeholder {
 }
 
 input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.details-page-header {
+  text-align: center;
+  padding: 180px 0px 90px 0px;
+  background: #0f202d;
+}
+
+.details-page-header h1 {
+  font-size: 52px;
+  color: #6b6b6b;
+}
+
+.details-page-header h1 span {
   color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

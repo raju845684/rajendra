@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 // import LOGO from "../../assets/images/rajendra.svg";
 import { Link, useLocation } from "react-router-dom";
 // import { getHeader } from "../../api/header";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
+import ScrollToTop from "../../CommonComponents/ScrollToTop";
 
 const Header = () => {
   const [menuActive, setMenuState] = useState(false);
@@ -26,22 +27,16 @@ const Header = () => {
     setMenuState((prevMenuActive) => !prevMenuActive);
   };
 
+  const { pathname } = useLocation();
+
+  const getContactLink = () => {
+    if (pathname === "/") {
+      return "/#contact";
+    }
+    return `${pathname}#contact`;
+  };
+
   console.log("isDarkMode", isDarkMode);
-
-  // const getNav = async () => {
-  //   try {
-  //     const data = await getHeader();
-  //     setNavbarData(data);
-  //   } catch (error) {
-  //     console.error("Error fetching navbar data:", error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getNav();
-  // }, []);
-
-  // console.log(navbarData)
 
   return (
     <div className="rm-header">
@@ -407,13 +402,24 @@ const Header = () => {
               className={`rm-menulist ${menuActive ? "open" : ""}`}
               onClick={toggleHandler}
             >
+              <ScrollToTop />
               <ul className="rm-menu">
-                  <li><Link to={""}>Home</Link> </li>
-                  <li><Link to={""}>About</Link></li>
-                  <li><Link to={""}>Portfolio</Link> </li>
-                  <li><Link to={""}>Services</Link></li>
-                  {/* <li><Link to={""}>Blog</Link> </li> */}
-                  <li><Link to={""}>Contact</Link></li>
+                <li>
+                  <Link to={"/"}>Home</Link>{" "}
+                </li>
+                <li>
+                  <Link to={"/about"}>About</Link>
+                </li>
+                <li>
+                  <Link to={"/portfolio"}>Portfolio</Link>{" "}
+                </li>
+                <li>
+                  <Link to={"/services"}>Services</Link>
+                </li>
+                {/* <li><Link to={""}>Blog</Link> </li> */}
+                <li>
+                  <a href={getContactLink()}>Contact</a>
+                </li>
               </ul>
               <div className="rm-lets-talk">
                 <DarkModeSwitch

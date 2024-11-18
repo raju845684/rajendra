@@ -219,6 +219,7 @@
   }
   .rm-testimonial {
     padding: 45px 0px;
+    padding-bottom: 20px;
   }
   .rm-contactus {
     padding: 35px 0px;
@@ -307,5 +308,11 @@
   }
   .rm-footer {
     border: 0;
+  }
+  .details-page-header h1 {
+    font-size: 30px;
+  }
+  .details-page-header {
+    padding: 160px 0px 60px 0px;
   }
 }

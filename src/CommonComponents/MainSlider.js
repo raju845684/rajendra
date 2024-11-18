@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import ANILOGO from "../assets/images/ani.svg";
-import MainProfile from "./svg/MainProfile";
 import { TypeAnimation } from "react-type-animation";
 import { RAENDRA } from "../assets/images";
 
@@ -47,10 +45,14 @@ const MainSlider = () => {
               </p>
               <ul>
                 <li className="rm-bg">
-                  <Link to="">Hire Me</Link>{" "}
+                  <a href="mailto:raju845684@gmail.com?subject=Hiring Inquiry&body=Hello,%20I%20would%20like%20to%20hire%20you.">
+                    Hire Me
+                  </a>{" "}
                 </li>
                 <li>
-                  <Link to="">Download CV</Link>{" "}
+                  <a href="/Rajendara-Resume.pdf" download="Rajendara-resume">
+                    Download CV
+                  </a>{" "}
                 </li>
               </ul>
             </div>
@@ -81,7 +83,7 @@ const MainSlider = () => {
           <img src={RAENDRA} alt="rajend" className="rajendra-photo" />
           <Col lg={6} md={12} sm={12} className="rm-icon">
             {/* <MainProfile /> */}
-            
+
             <div className="rm-doots">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

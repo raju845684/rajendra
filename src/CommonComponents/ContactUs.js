@@ -1,9 +1,10 @@
 import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import ContactDetails from "./ContactDetails";
 
 const ContactUs = () => {
   return (
-    <div className="rm-contactus">
+    <div className="rm-contactus" id="contact">
       <Container>
         <Row>
           <Col lg={12} md={12} sm={12} className="rm-global-heading">
@@ -434,6 +435,7 @@ const ContactUs = () => {
                 Send Message
               </Button>
             </Form>
+            {/* <ContactDetails /> */}
           </Col>
         </Row>
       </Container>

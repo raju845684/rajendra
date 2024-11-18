@@ -22,8 +22,8 @@ const AppRouter = () => {
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Servicess />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/blog" element={<Blog />} /> */}
+          {/* <Route path="/contact" element={<Contact />} /> */}
         </Route>
         <Route path="/admin" element={<Dashbord />} />
         <Route path="/signin" element={<SignIn />} />
