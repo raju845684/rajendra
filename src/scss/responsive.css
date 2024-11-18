@@ -92,6 +92,8 @@
   }
   .rm-footer .rm-left ul {
     text-align: center;
+    border-top: 1px solid #a9a9a9;
+    padding-top: 30px;
   }
   .rm-footer .rm-right {
     text-align: center;
@@ -111,6 +113,7 @@
   }
   .rm-footer .rm-right h6 {
     font-size: 12px;
+    margin-top: 4px;
   }
   .rm-main-slider .rm-content .rm-info h5 {
     font-size: 16px;
@@ -146,8 +149,8 @@
     margin-top: 15px;
   }
   .rm-services .rm-services-box p {
-    font-size: 13px;
-    line-height: 23px;
+    font-size: 12px;
+    line-height: 22px;
   }
   .rm-work .container .tild {
     top: -30px;
@@ -201,7 +204,7 @@
   }
   .rm-testimonial .testimonial-content {
     margin-right: 0;
-    padding: 40px;
+    padding: 30px;
     width: 100%;
     margin-left: 0px;
     border-radius: 8px;
@@ -219,9 +222,12 @@
   }
   .rm-contactus {
     padding: 35px 0px;
+    padding-bottom: 13px;
   }
   .rm-contactus form .rm-bg {
     margin-top: 30px;
+    padding: 9px 15px;
+    font-size: 12px;
   }
   .rm-main-slider .rm-content .rm-info {
     margin-top: -320px;
@@ -243,9 +249,60 @@
     display: none;
   }
   .rm-aboutme .rm-content h5 {
-    font-size: 27px;
+    font-size: 21px;
+    min-height: 52px;
   }
-  /* .rm-header,.rm-main-slider,.rm-aboutme,.rm-services, .rm-work,.rm-testimonial,.rm-client-logo,.rm-contactus,.rm-footer {
-    display: none;
-  } */
+  .rm-work .card img {
+    opacity: 1;
+  }
+  .rm-aboutme .rm-content p {
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 18px;
+  }
+  .rm-aboutme .rm-progressbar .rm-progressbar-single span {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+  .rm-aboutme
+    .rm-progressbar
+    .rm-progressbar-single
+    .react-sweet-progress-symbol {
+    top: -28px;
+    right: 0px;
+    font-size: 12px;
+  }
+  .rm-aboutme
+    .rm-progressbar
+    .rm-progressbar-single
+    .react-sweet-progress-line-inner {
+    min-height: 5px;
+  }
+  .rm-aboutme .rm-progressbar .rm-progressbar-single {
+    margin-bottom: 20px;
+  }
+  .rm-services .rm-services-box h3 {
+    font-size: 19px;
+  }
+  .rm-contactus form .form-control {
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 8px 0px;
+    border-bottom: 1px solid #a9a9a9;
+  }
+  .rm-testimonial .testimonial-content p {
+    font-size: 12px;
+  }
+  .rm-testimonial .testimonial-content span {
+    font-size: 13px;
+  }
+  .rm-testimonial .testimonial-content h4 {
+    font-size: 19px;
+  }
+  .rm-contactus form textarea {
+    height: 107px !important;
+  }
+  .rm-footer {
+    border: 0;
+  }
 }

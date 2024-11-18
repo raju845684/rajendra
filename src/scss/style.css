@@ -199,6 +199,7 @@ a {
   border-top: 1px solid #6d6d6d;
   padding: 25px 0px;
   margin-top: 25px;
+  position: relative;
 }
 
 .rm-footer .rm-left ul li {
@@ -824,19 +825,20 @@ a {
   background-color: transparent !important;
   -webkit-transition: all 0.4s linear 0.4s;
   transition: all 0.4s linear 0.4s;
+  border: 1px solid #646464;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .rm-work .card img {
   -o-object-fit: cover;
      object-fit: cover;
-  border: 1px solid #535454;
-  border-radius: 8px;
   width: 100%;
   opacity: 0.7;
 }
 
 .rm-work .card .card-body {
-  padding: 20px 0px;
+  padding: 20px 25px;
   padding-bottom: 8px;
 }
 
@@ -850,7 +852,7 @@ a {
 
 .rm-work .card .card-body .card-text {
   font-size: 15px;
-  padding-left: 50px;
+  padding-left: 40px;
   position: relative;
 }
 
@@ -859,7 +861,7 @@ a {
   display: block;
   position: absolute;
   height: 2px;
-  width: 40px;
+  width: 28px;
   background-color: #b0b0b2;
   left: 0;
   top: 10px;
@@ -1035,6 +1037,7 @@ a {
   border-radius: 0;
   margin-bottom: 20px;
   color: #ffffff;
+  resize: none;
 }
 
 .rm-contactus form .form-control:focus {
