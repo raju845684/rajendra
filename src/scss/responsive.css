@@ -75,7 +75,7 @@
     top: -350px;
   }
   .rm-main-slider .rm-content .rm-info h1 {
-    font-size: 25px;
+    font-size: 26px;
     line-height: 38px;
     margin-bottom: 8px;
   }
@@ -171,20 +171,20 @@
     position: relative;
     right: auto;
     top: -45px;
-    opacity: 0.6;
+    z-index: -1;
   }
   .rm-main-slider {
     padding: 155px 0px 25px 0px;
   }
   .rm-aboutme {
     padding: 15px 0px;
-    padding-top: 30px;
+    padding-top: 10px;
   }
   .rm-global-heading {
     margin-bottom: 55px;
   }
   .rm-services {
-    padding: 55px 0px;
+    padding: 35px 0px;
   }
   .rm-global-view_all h6 {
     padding-bottom: 17px;
@@ -233,4 +233,19 @@
   .rm-client-logo ul li a img {
     width: 80%;
   }
+  .rm-main-slider .rm-content .rm-info p {
+    color: #e7e7e7;
+  }
+  .rm-header .rm-header-col .rm-logo a svg {
+    width: 110px;
+  }
+  .rm-testimonial .testimonial-content::after {
+    display: none;
+  }
+  .rm-aboutme .rm-content h5 {
+    font-size: 27px;
+  }
+  /* .rm-header,.rm-main-slider,.rm-aboutme,.rm-services, .rm-work,.rm-testimonial,.rm-client-logo,.rm-contactus,.rm-footer {
+    display: none;
+  } */
 }

@@ -1034,6 +1034,13 @@ a {
   border-bottom: 2px solid #a9a9a9;
   border-radius: 0;
   margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.rm-contactus form .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .rm-contactus form .rm-bg {
@@ -1125,5 +1132,25 @@ a {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #ffffff;
+}
+
+input::-ms-input-placeholder {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
