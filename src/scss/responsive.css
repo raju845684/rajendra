@@ -316,9 +316,12 @@
     padding: 160px 0px 60px 0px;
   }
   .is-invalid ~ .invalid-feedback,
-.is-invalid ~ .invalid-tooltip,
-.was-validated :invalid ~ .invalid-feedback,
-.was-validated :invalid ~ .invalid-tooltip {
+  .is-invalid ~ .invalid-tooltip,
+  .was-validated :invalid ~ .invalid-feedback,
+  .was-validated :invalid ~ .invalid-tooltip {
     bottom: -20px;
-}
+  }
+  .Toastify__toast-container.Toastify__toast-container--top-center {
+    padding: 30px;
+  }
 }
