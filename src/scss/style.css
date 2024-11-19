@@ -1032,6 +1032,10 @@ a {
   padding-left: 50px;
 }
 
+.rm-contactus form .mb-3 {
+  position: relative;
+}
+
 .rm-contactus form .form-control {
   background-color: transparent;
   border: 0px;
@@ -1174,5 +1178,15 @@ input::-ms-input-placeholder {
 
 .details-page-header h1 span {
   color: #ffffff;
+}
+
+.is-invalid ~ .invalid-feedback,
+.is-invalid ~ .invalid-tooltip,
+.was-validated :invalid ~ .invalid-feedback,
+.was-validated :invalid ~ .invalid-tooltip {
+  display: block;
+  position: absolute;
+  bottom: -25px;
+  font-size: 11px;
 }
 /*# sourceMappingURL=style.css.map */

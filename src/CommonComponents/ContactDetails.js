@@ -1,152 +1,155 @@
-import React, { useState } from "react";
-import { Col, Form, Button } from "react-bootstrap";
+import React from "react";
+import { Form, Button } from "react-bootstrap";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
 
 const ContactDetails = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
+  const initialValues = {
+    from_name: "",
+    from_email: "",
+    from_subject: "",
     message: "",
+  };
+
+  const validationSchema = Yup.object({
+    from_name: Yup.string().required("Name is required"),
+    from_email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    from_subject: Yup.string().required("Subject is required"),
+    message: Yup.string().required("Message is required"),
   });
 
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const validateForm = () => {
-    const newErrors = {};
-    let isValid = true;
-
-    if (!formData.name) {
-      newErrors.name = "Name is required";
-      isValid = false;
-    }
-    if (!formData.email) {
-      newErrors.email = "Email is required";
-      isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid";
-      isValid = false;
-    }
-    if (!formData.subject) {
-      newErrors.subject = "Subject is required";
-      isValid = false;
-    }
-    if (!formData.message) {
-      newErrors.message = "Message is required";
-      isValid = false;
-    }
-
-    setErrors(newErrors);
-    return isValid;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (validateForm()) {
-      setIsSubmitting(true);
-      setErrorMessage("");
-      setSuccessMessage("");
-
-      try {
-        const response = await fetch("/api/sendMessage", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-          setSuccessMessage("Message sent successfully!");
-          setFormData({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
+  const sendEmail = (values, actions) => {
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        values,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          // Success toast
+          toast.success("Message sent successfully!", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
           });
-        } else {
-          setErrorMessage(data.error || "Something went wrong");
+          actions.resetForm(); // Clear the form
+        },
+        (error) => {
+          // Error toast
+          toast.error(`Failed to send message: ${error.text}`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+          });
         }
-      } catch (error) {
-        setErrorMessage("Failed to send message");
-      } finally {
-        setIsSubmitting(false);
-      }
-    }
+      )
+      .finally(() => {
+        actions.setSubmitting(false); 
+      });
   };
 
   return (
     <>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicName">
-          <Form.Control
-            type="text"
-            placeholder="Your Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {errors.name && <div style={{ color: "red" }}>{errors.name}</div>}
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Control
-            type="email"
-            placeholder="Your Email Address"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {errors.email && <div style={{ color: "red" }}>{errors.email}</div>}
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicSubject">
-          <Form.Control
-            type="text"
-            placeholder="Subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-          />
-          {errors.subject && (
-            <div style={{ color: "red" }}>{errors.subject}</div>
-          )}
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicMessage">
-          <Form.Control
-            as="textarea"
-            placeholder="Leave a comment here"
-            style={{ height: "157px" }}
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-          {errors.message && (
-            <div style={{ color: "red" }}>{errors.message}</div>
-          )}
-        </Form.Group>
-        <Button
-          className="rm-bg"
-          variant="primary"
-          type="submit"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? "Sending..." : "Send Message"}
-        </Button>
-      </Form>
-      {successMessage && <div style={{ color: "green" }}>{successMessage}</div>}
-      {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
+      {/* Place ToastContainer here to show toasts */}
+      <ToastContainer />
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={sendEmail}
+      >
+        {({
+          handleSubmit,
+          handleChange,
+          handleBlur,
+          values,
+          touched,
+          errors,
+          isSubmitting,
+          isValid,
+        }) => (
+          <Form noValidate onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicName">
+              <Form.Control
+                type="text"
+                placeholder="Your Name"
+                name="from_name"
+                value={values.from_name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                isInvalid={touched.from_name && !!errors.from_name}
+              />
+              <Form.Control.Feedback type="invalid">
+                {errors.from_name}
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control
+                type="email"
+                placeholder="Email Address"
+                name="from_email"
+                value={values.from_email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                isInvalid={touched.from_email && !!errors.from_email}
+              />
+              <Form.Control.Feedback type="invalid">
+                {errors.from_email}
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicSubject">
+              <Form.Control
+                type="text"
+                placeholder="Subject"
+                name="from_subject"
+                value={values.from_subject}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                isInvalid={touched.from_subject && !!errors.from_subject}
+              />
+              <Form.Control.Feedback type="invalid">
+                {errors.from_subject}
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicMessage">
+              <Form.Control
+                as="textarea"
+                placeholder="Leave a comment here"
+                style={{ height: "157px" }}
+                name="message"
+                value={values.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                isInvalid={touched.message && !!errors.message}
+              />
+              <Form.Control.Feedback type="invalid">
+                {errors.message}
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Button
+              className="rm-bg"
+              variant="primary"
+              type="submit"
+              disabled={!isValid || isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </Button>
+          </Form>
+        )}
+      </Formik>
     </>
   );
 };

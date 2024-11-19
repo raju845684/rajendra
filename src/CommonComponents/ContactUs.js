@@ -414,7 +414,7 @@ const ContactUs = () => {
             </svg>
           </Col>
           <Col lg={6} md={12} sm={12}>
-            <Form>
+            {/* <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control type="text" placeholder="Your Name" />
               </Form.Group>
@@ -434,8 +434,8 @@ const ContactUs = () => {
               <Button className="rm-bg" variant="primary" type="submit">
                 Send Message
               </Button>
-            </Form>
-            {/* <ContactDetails /> */}
+            </Form> */}
+            <ContactDetails />
           </Col>
         </Row>
       </Container>
