@@ -15,7 +15,7 @@ const Testimonial = () => {
     {
       id: 2,
       name: "John",
-      role: "Designer",
+      role: "Designer", 
       image:
         "https://innius.com/wp-content/uploads/2018/02/Erik-with-bkgrd-785x1030.jpg",
       text: "They set the gold standard for excellence. We've been relying on their unmatched expertise, and they've never let us down confidently.",
