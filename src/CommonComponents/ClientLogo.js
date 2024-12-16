@@ -10,16 +10,16 @@ const ClientLogo = () => {
           <Col lg={12} md={12} sm={12}>
             <ul>
                 <li>
-                    <a href="" target="_blank"><img src={CLIENTLOGO1} alt=""/></a>
+                    <a href="https://www.cantabnyc.org/" target="_blank"><img src={CLIENTLOGO1} alt=""/></a>
                 </li>
                 <li>
-                    <a href="" target="_blank"><img src={CLIENTLOGO2} alt=""/></a>
+                    <a href="https://www.twocreate.in/" target="_blank"><img src={CLIENTLOGO2} alt=""/></a>
                 </li>
                 <li>
-                    <a href="" target="_blank"><img src={CLIENTLOGO3} alt=""/></a>
+                    <a href="https://www.v2stech.com/" target="_blank"><img src={CLIENTLOGO3} alt=""/></a>
                 </li>
                 <li>
-                    <a href="" target="_blank"><img src={CLIENTLOGO4} alt=""/></a>
+                    <a href="https://www.setzerlawfirm.com/" target="_blank"><img src={CLIENTLOGO4} alt=""/></a>
                 </li>
             </ul>
           </Col>

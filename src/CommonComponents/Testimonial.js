@@ -14,7 +14,7 @@ const Testimonial = () => {
     },
     {
       id: 2,
-      name: "Anna",
+      name: "John",
       role: "Designer",
       image:
         "https://innius.com/wp-content/uploads/2018/02/Erik-with-bkgrd-785x1030.jpg",
@@ -22,7 +22,7 @@ const Testimonial = () => {
     },
     {
       id: 3,
-      name: "John",
+      name: "Sophia",
       role: "Software Engineer",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ivwcBgmGtt15t8FfrmVcERcgaY2ajg1J-g&s",
@@ -30,7 +30,7 @@ const Testimonial = () => {
     },
     {
       id: 4,
-      name: "Sophia",
+      name: "Anna",
       role: "HR Manager",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJLXGVOByPdPaKy75tt5W3ege8iewGhx8GD2DrND8oD1iGyNiU4jjQSL9aktTukOXSETA&usqp=CAU",

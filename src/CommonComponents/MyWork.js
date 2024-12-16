@@ -13,8 +13,83 @@ import {
 } from "../assets/images";
 import Tild from "../components/CommonVector/Tild";
 
+const dummyData = [
+  {
+    id: 1,
+    title: "Robnhood nl",
+    link: "https://robnhood.nl/",
+    img: PROJECT1,
+    tags: ["Javascript", "Web"],
+  },
+  {
+    id: 2,
+    title: "Pathlock",
+    link: "https://pathlock.com/",
+    img: PROJECT2,
+    tags: ["React Js", "UI"],
+  },
+  {
+    id: 3,
+    title: "Q fix",
+    link: "https://www.qfixinfo.com/index.php",
+    img: PROJECT3,
+    tags: ["Javascript", "PHP"],
+  },
+  {
+    id: 4,
+    title: "Fissara",
+    link: "https://www.fissara.com/homepage/",
+    img: PROJECT4,
+    tags: ["Javascript", "UI"],
+  },
+  {
+    id: 5,
+    title: "True Farm Foods",
+    link: "https://truefarmfoods.com/",
+    img: PROJECT5,
+    tags: ["Javascript", "UI"],
+  },
+  {
+    id: 6,
+    title: "Meganrachel",
+    link: "https://meganrachel.com/",
+    img: PROJECT6,
+    tags: ["Javascript", "UI"],
+  },
+  {
+    id: 7,
+    title: "Injured Care",
+    link: "https://www.injuredcare.com/",
+    img: PROJECT7,
+    tags: ["Javascript", "Jquery"],
+  },
+  {
+    id: 8,
+    title: "Cantabnyc",
+    link: "https://www.cantabnyc.org/",
+    img: PROJECT8,
+    tags: ["Javascript", "BootStrap"],
+  },
+  // Add more dummy items here...
+];
+
+const ITEMS_PER_LOAD = 10;
 const MyWork = () => {
   const location = useLocation();
+  const [itemsToShow, setItemsToShow] = useState(
+    dummyData.slice(0, ITEMS_PER_LOAD)
+  );
+  const [itemsLoaded, setItemsLoaded] = useState(ITEMS_PER_LOAD);
+
+  const loadMore = () => {
+    const newItemsLoaded = itemsLoaded + ITEMS_PER_LOAD;
+    setItemsToShow(dummyData.slice(0, newItemsLoaded));
+    setItemsLoaded(newItemsLoaded);
+  };
+  const pagesWithLoadMore = ["/portfolio", "/about", "/services"];
+  const itemsToRender =
+    location.pathname === "/" ? itemsToShow.slice(0, 8) : itemsToShow;
+
   return (
     <div className="rm-work">
       <Container>
@@ -61,141 +136,49 @@ const MyWork = () => {
           <Col lg={12} md={12} sm={12} className="rm-content">
             <div>
               <div className="grid">
-                <div className="grid-item category-a">
-                  <Card>
-                    <a href={"https://robnhood.nl/"} target="_blank">
-                      <Card.Img variant="top" src={PROJECT1} alt="" />
-                    </a>
-                    <Card.Body>
-                      <a href={"https://robnhood.nl/"} target="_blank">
-                        <Card.Title>Robnhood nl</Card.Title>
-                      </a>
-                      <Card.Text>
-                        <span>Robnhood nl</span>, <span>UI</span>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="grid-item category-b">
-                  <Card>
-                    <a href={"https://pathlock.com/"} target="_blank">
-                      <Card.Img variant="top" src={PROJECT2} alt="" />
-                    </a>
-                    <Card.Body>
-                      <a href={"https://pathlock.com/"} target="_blank">
-                        <Card.Title>Pathlock</Card.Title>
-                      </a>
-                      <Card.Text>
-                        <span>Robnhood nl</span>, <span>UI</span>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="grid-item category-a">
-                  <Card>
-                    <a
-                      href={"https://www.qfixinfo.com/index.php"}
-                      target="_blank"
-                    >
-                      <Card.Img variant="top" src={PROJECT3} alt="" />
-                    </a>
-                    <Card.Body>
+                {itemsToRender.map((item) => (
+                  <div className="grid-item" key={item.id}>
+                    <Card>
                       <a
-                        href={"https://www.qfixinfo.com/index.php"}
+                        href={item.link}
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <Card.Title>Q fix </Card.Title>
+                        <Card.Img
+                          variant="top"
+                          src={item.img}
+                          alt={item.title}
+                        />
                       </a>
-                      <Card.Text>
-                        <span>Web</span>, <span>UI</span>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="grid-item category-b">
-                  <Card>
-                    <a
-                      href={"https://www.fissara.com/homepage/"}
-                      target="_blank"
-                    >
-                      <Card.Img variant="top" src={PROJECT4} alt="" />
-                    </a>
-                    <Card.Body>
-                      <a
-                        href={"https://www.fissara.com/homepage/"}
-                        target="_blank"
-                      >
-                        <Card.Title>fissara</Card.Title>
-                      </a>
-                      <Card.Text>
-                        <span>Web</span>, <span>UI</span>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="grid-item category-a">
-                  <Card>
-                    <a href={"https://truefarmfoods.com/"} target="_blank">
-                      <Card.Img variant="top" src={PROJECT5} alt="" />
-                    </a>
-                    <Card.Body>
-                      <a href={"https://truefarmfoods.com/"} target="_blank">
-                        <Card.Title>True Farm Foods</Card.Title>
-                      </a>
-                      <Card.Text>
-                        <span>Web</span>, <span>UI</span>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="grid-item category-b">
-                  <Card>
-                    <a href={"https://meganrachel.com/"} target="_blank">
-                      <Card.Img variant="top" src={PROJECT6} alt="" />
-                    </a>
-                    <Card.Body>
-                      <a href={"https://meganrachel.com/"} target="_blank">
-                        <Card.Title>Meganrachel</Card.Title>
-                      </a>
-                      <Card.Text>
-                        <span>Web</span>, <span>UI</span>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="grid-item category-c">
-                  <Card>
-                    <a href={"https://www.injuredcare.com/"} target="_blank">
-                      <Card.Img variant="top" src={PROJECT7} alt="" />
-                    </a>
-                    <Card.Body>
-                      <a href={"https://www.injuredcare.com/"} target="_blank">
-                        <Card.Title>Injured Care</Card.Title>
-                      </a>
-                      <Card.Text>
-                        <span>Web</span>, <span>UI</span>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="grid-item category-c">
-                  <Card>
-                    <a href={"https://www.cantabnyc.org/"} target="_blank">
-                      <Card.Img variant="top" src={PROJECT8} alt="" />
-                    </a>
-                    <Card.Body>
-                      <a href={"https://www.cantabnyc.org/"} target="_blank">
-                        <Card.Title>Cantabnyc</Card.Title>
-                      </a>
-                      <Card.Text>
-                        <span>Web</span>, <span>UI</span>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
+                      <Card.Body>
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Card.Title>{item.title}</Card.Title>
+                        </a>
+                        <Card.Text>
+                          {item.tags.map((tag, index) => (
+                            <span key={index}>{tag}</span>
+                          ))}
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                ))}
               </div>
             </div>
           </Col>
+          {pagesWithLoadMore.includes(location.pathname) && (
+            <Col lg={12} md={12} sm={12} className="rm-content text-center">
+              {itemsToShow.length < dummyData.length && (
+                <Button className="loadmore" onClick={loadMore}>
+                  Load more
+                </Button>
+              )}
+            </Col>
+          )}
         </Row>
       </Container>
     </div>

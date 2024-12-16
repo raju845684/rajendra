@@ -871,6 +871,10 @@ a {
   top: 10px;
 }
 
+.rm-work .card .card-body .card-text span {
+  margin-right: 10px;
+}
+
 .rm-work .card:hover img {
   opacity: 1;
 }
@@ -1188,5 +1192,16 @@ input::-ms-input-placeholder {
   position: absolute;
   bottom: -25px;
   font-size: 11px;
+}
+
+.loadmore {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 10px 25px;
+  border: 1px solid #34f5c6;
+  border-radius: 4px;
+  background: linear-gradient(91deg, #1dcefc 5.15%, #2fe9c0 99.88%);
+  color: #090a1a;
 }
 /*# sourceMappingURL=style.css.map */

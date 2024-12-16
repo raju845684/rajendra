@@ -324,4 +324,11 @@
   .Toastify__toast-container.Toastify__toast-container--top-center {
     padding: 30px;
   }
+  .loadmore {
+    margin-top: 20px;
+  }
+  .loadmore {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
 }

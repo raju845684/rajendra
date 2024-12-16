@@ -422,12 +422,12 @@ const Header = () => {
                 </li>
               </ul>
               <div className="rm-lets-talk">
-                <DarkModeSwitch
+                {/* <DarkModeSwitch
                   style={{ marginBottom: "0rem" }}
                   checked={isDarkMode}
                   onChange={toggleDarkMode}
                   size={24}
-                />
+                /> */}
                 <a href="tel:+918114714428">Let's Talk</a>
               </div>
             </div>
