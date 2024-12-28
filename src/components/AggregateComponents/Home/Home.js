@@ -16,7 +16,7 @@ const Home = () => {
       <MyWork />
       <Testimonial />
       <ClientLogo />
-      <ContactUs />
+      <ContactUs /> 
     </>
   );
 };
